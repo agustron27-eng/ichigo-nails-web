@@ -279,43 +279,63 @@
         </div>
         <div class="service-option" onclick="selectService(1, 17000, 'Capping Gel')"><span class="block text-gray-600 text-sm font-semibold mb-2">Capping con Gel</span> <span class="font-semibold text-[#cf737c] text-lg">$17.000</span>
         </div>
-        <div class="service-option" onclick="selectService(2, 18000, 'Capping PolyGel')"><span class="block text-gray-600 text-sm font-semibold mb-2">Capping con PolyGel</span> <span class="font-semibold text-[#cf737c] text-lg">$18.000</span>
+        <div class="service-option" onclick="selectService(2, 19000, 'Capping PolyGel')"><span class="block text-gray-600 text-sm font-semibold mb-2">Capping con PolyGel</span> <span class="font-semibold text-[#cf737c] text-lg">$19.000</span>
         </div>
         <div class="service-option" onclick="selectService(3, 16000, 'Semipermanente')"><span class="block text-gray-600 text-sm font-semibold mb-2">Semipermanente</span> <span class="font-semibold text-[#cf737c] text-lg">$16.000</span>
         </div>
        </div>
       </div><!-- Design Selection Card -->
-      <div class="card p-5 md:p-7 fade-in" style="animation-delay: 0.2s">
-       <div class="mb-5">
-        <h2 class="font-display text-xl md:text-2xl font-medium mb-1" style="color: var(--text-primary);">Seleccioná la decoración</h2>
-        <p class="text-gray-500 text-sm">El precio de cada diseño es por uña, seleccioná la cantidad deseada de decoración para cotizar mejor.</p>
-       </div>
-       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="card p-4 text-center"><span class="block text-gray-600 text-sm font-semibold mb-3">Francesitas</span> <span class="block font-semibold text-[#d4527b] text-sm mb-4">$200 por uña</span>
-         <div class="flex items-center justify-center gap-2"><button class="counter-btn text-sm" onclick="updateDesign(0, -1)">−</button> <span id="design-0" class="text-lg font-semibold w-6 text-center" style="color: var(--text-primary);">0</span> <button class="counter-btn text-sm" onclick="updateDesign(0, 1)">+</button>
-         </div>
-        </div>
-        <div class="card p-4 text-center"><span class="block text-gray-600 text-sm font-semibold mb-3">Cat Eye</span> <span class="block font-semibold text-[#d4527b] text-sm mb-4">$300 por uña</span>
-         <div class="flex items-center justify-center gap-2"><button class="counter-btn text-sm" onclick="updateDesign(1, -1)">−</button> <span id="design-1" class="text-lg font-semibold w-6 text-center" style="color: var(--text-primary);">0</span> <button class="counter-btn text-sm" onclick="updateDesign(1, 1)">+</button>
-         </div>
-        </div>
-        <div class="card p-4 text-center"><span class="block text-gray-600 text-sm font-semibold mb-3">Chrome</span> <span class="block font-semibold text-[#d4527b] text-sm mb-4">$200 por uña</span>
-         <div class="flex items-center justify-center gap-2"><button class="counter-btn text-sm" onclick="updateDesign(2, -1)">−</button> <span id="design-2" class="text-lg font-semibold w-6 text-center" style="color: var(--text-primary);">0</span> <button class="counter-btn text-sm" onclick="updateDesign(2, 1)">+</button>
-         </div>
-        </div>
-        <div class="card p-4 text-center"><span class="block text-gray-600 text-sm font-semibold mb-3">Nail art simple</span> <span class="block font-semibold text-[#d4527b] text-sm mb-4">$300 por uña</span>
-         <div class="flex items-center justify-center gap-2"><button class="counter-btn text-sm" onclick="updateDesign(3, -1)">−</button> <span id="design-3" class="text-lg font-semibold w-6 text-center" style="color: var(--text-primary);">0</span> <button class="counter-btn text-sm" onclick="updateDesign(3, 1)">+</button>
-         </div>
-        </div>
-        <div class="card p-4 text-center"><span class="block text-gray-600 text-sm font-semibold mb-3">Nail Art Complejo</span> <span class="block font-semibold text-[#d4527b] text-sm mb-4">$500 por uña</span>
-         <div class="flex items-center justify-center gap-2"><button class="counter-btn text-sm" onclick="updateDesign(4, -1)">−</button> <span id="design-4" class="text-lg font-semibold w-6 text-center" style="color: var(--text-primary);">0</span> <button class="counter-btn text-sm" onclick="updateDesign(4, 1)">+</button>
-         </div>
-        </div>
-        <div class="card p-4 text-center"><span class="block text-gray-600 text-sm font-semibold mb-3">3D/Relieve</span> <span class="block font-semibold text-[#d4527b] text-sm mb-4">$300 por uña</span>
-         <div class="flex items-center justify-center gap-2"><button class="counter-btn text-sm" onclick="updateDesign(5, -1)">−</button> <span id="design-5" class="text-lg font-semibold w-6 text-center" style="color: var(--text-primary);">0</span> <button class="counter-btn text-sm" onclick="updateDesign(5, 1)">+</button>
-         </div>
-        </div>
-       </div>
+      <!-- Decoration Selection Card -->
+<div class="card p-5 md:p-7 fade-in" style="animation-delay: 0.2s">
+  <div class="mb-5">
+    <h2 class="font-display text-xl md:text-2xl font-medium mb-1" style="color: var(--text-primary);">
+      Seleccioná la decoración
+    </h2>
+    <p class="text-gray-500 text-sm">
+      Elegí una sola opción de decoración
+    </p>
+  </div>
+
+  <div class="space-y-3">
+
+    <!-- Deco incluida -->
+    <label class="flex items-center gap-3 p-4 rounded-lg cursor-pointer border">
+      <input type="radio" name="deco" checked
+             onclick="selectDeco('Deco incluida en el set', 0)">
+      <div>
+        <span class="block font-semibold">Deco incluida en el set</span>
+        <span class="block text-sm text-gray-500">
+          Incluye 2 uñas decoradas — $0
+        </span>
+      </div>
+    </label>
+
+    <!-- Deco intermedia -->
+    <label class="flex items-center gap-3 p-4 rounded-lg cursor-pointer border">
+      <input type="radio" name="deco"
+             onclick="selectDeco('Decoración intermedia', 3000)">
+      <div>
+        <span class="block font-semibold">Decoración intermedia</span>
+        <span class="block text-sm text-gray-500">
+          inclye 5 uñas decoradas — $3.000
+        </span>
+      </div>
+    </label>
+
+    <!-- Full deco -->
+    <label class="flex items-center gap-3 p-4 rounded-lg cursor-pointer border">
+      <input type="radio" name="deco"
+             onclick="selectDeco('Full deco', 5000)">
+      <div>
+        <span class="block font-semibold">Full deco</span>
+        <span class="block text-sm text-gray-500">
+          Incluye 10 uñas decoradas — $5.000
+        </span>
+      </div>
+    </label>
+
+  </div>
+</div>
       </div><!-- Removal Services Card -->
       <div class="card p-5 md:p-7 fade-in" style="animation-delay: 0.25s">
        <div class="mb-5">
@@ -379,20 +399,19 @@
     let selectedService = 'Soft Gel';
     let servicePrice = 20000;
     
-    // Design prices
-    const designs = [
-      { name: 'Francesitas', price: 200 },
-      { name: 'Cat Eye', price: 300 },
-      { name: 'Chrome', price: 350 },
-      { name: 'Glitter', price: 250 },
-      { name: 'Ombré', price: 400 },
-      { name: 'Nail Art Complejo', price: 500 }
-    ];
-    
+
     let designCounts = [0, 0, 0, 0, 0, 0];
     let removerChigo = false;
     let removerOther = false;
+// Decoration pack
+let decoName = "Deco incluida en el set";
+let decoPrice = 0;
 
+function selectDeco(name, price) {
+  decoName = name;
+  decoPrice = price;
+  calculateTotal();
+}
     // Select service
     function selectService(index, price, name) {
       servicePrice = price;
@@ -417,13 +436,7 @@
       calculateTotal();
     }
 
-    // Update design quantity
-    function updateDesign(index, delta) {
-      designCounts[index] = Math.max(0, designCounts[index] + delta);
-      document.getElementById(`design-${index}`).textContent = designCounts[index];
-      calculateTotal();
-    }
-
+    
     // Update remover selection
     function updateRemover(type) {
       if (type === 'chigo') {
@@ -444,55 +457,41 @@
 
     // Calculate total
     function calculateTotal() {
-      // Base service
-      let total = servicePrice;
-      
-      // Add designs
-      let designsTotal = 0;
-      designCounts.forEach((count, index) => {
-        designsTotal += count * designs[index].price;
-      });
-      total += designsTotal;
-      
-      // Add remover
-      let removerTotal = 0;
-      if (removerChigo) {
-        removerTotal = 2000;
-      } else if (removerOther) {
-        removerTotal = 4000;
-      }
-      total += removerTotal;
+  let total = servicePrice;
 
-      // Update summary
-      document.getElementById('service-name').textContent = selectedService;
-      document.getElementById('summary-service').textContent = `$${servicePrice.toLocaleString()}`;
-      
-      // Update designs summary
-      const designSummaryEl = document.getElementById('design-summary');
-      if (designsTotal > 0) {
-        designSummaryEl.style.display = 'flex';
-        document.getElementById('summary-designs').textContent = `$${designsTotal.toLocaleString()}`;
-      } else {
-        designSummaryEl.style.display = 'none';
-      }
-      
-      // Update remover summary
-      const removerSummaryEl = document.getElementById('remover-summary');
-      if (removerTotal > 0) {
-        removerSummaryEl.style.display = 'flex';
-        document.getElementById('summary-remover').textContent = `$${removerTotal.toLocaleString()}`;
-      } else {
-        removerSummaryEl.style.display = 'none';
-      }
-      
-      const totalEl = document.getElementById('total-price');
-      totalEl.style.transform = 'scale(1.05)';
-      totalEl.textContent = `$${total.toLocaleString()}`;
-      
-      setTimeout(() => {
-        totalEl.style.transform = 'scale(1)';
-      }, 150);
-    }
+  // Add decoration pack
+  total += decoPrice;
+
+  // Add remover
+  let removerTotal = 0;
+  if (removerChigo) {
+    removerTotal = 2000;
+  } else if (removerOther) {
+    removerTotal = 4000;
+  }
+  total += removerTotal;
+
+  // Update summary
+  document.getElementById('service-name').textContent = selectedService;
+  document.getElementById('summary-service').textContent = `$${servicePrice.toLocaleString()}`;
+
+  // Decoration summary
+  document.getElementById('design-summary').style.display = 'flex';
+  document.getElementById('summary-designs').textContent =
+    `${decoName} - $${decoPrice.toLocaleString()}`;
+
+  // Remover summary
+  const removerSummaryEl = document.getElementById('remover-summary');
+  if (removerTotal > 0) {
+    removerSummaryEl.style.display = 'flex';
+    document.getElementById('summary-remover').textContent = `$${removerTotal.toLocaleString()}`;
+  } else {
+    removerSummaryEl.style.display = 'none';
+  }
+
+  const totalEl = document.getElementById('total-price');
+  totalEl.textContent = `$${total.toLocaleString()}`;
+}
 
     // Book appointment
 function bookAppointment() {
@@ -501,48 +500,26 @@ function bookAppointment() {
   let servicePrice = document.getElementById("summary-service").innerText;
   let total = document.getElementById("total-price").innerText;
 
-  const designNames = [
-    "Francesitas",
-    "Cat Eye",
-    "Chrome",
-    "Nail Art Simple",
-    "Nail Art Complejo",
-    "3D / Relieve"
-  ];
-
-  let designDetails = "";
-  
-  for (let i = 0; i < designNames.length; i++) {
-    let quantity = parseInt(document.getElementById(`design-${i}`).innerText);
-    if (quantity > 0) {
-      designDetails += "• " + designNames[i] + ": " + quantity + " uña(s)\n";
-    }
-  }
-
-  if (designDetails === "") {
-    designDetails = "Sin diseños adicionales\n";
-  }
-
   let removerText = "";
   if (document.getElementById("remover-chigo").checked) {
-    removerText = "Remoción servicio Ichigo Nails\n";
+    removerText = "Remoción servicio Ichigo Nails";
   }
   if (document.getElementById("remover-other").checked) {
-    removerText = "Remoción servicio otra colega\n";
+    removerText = "Remoción servicio otra colega";
   }
 
-  let message = "Holi! ♡ te envío la cotización de mi servicio:\n\n" +
-    "𐙚 Servicio:\n" +
-    service + " - " + servicePrice + "\n\n" +
-    "‧₊˚ Diseños:\n" +
-    designDetails +
-    (removerText ? "\n꩜ Remoción:\n" + removerText : "") +
-    "\n$ Total estimado:\n" +
-    total +
-    "\n\nQuedo atenta";
+  let message =
+  "Holi! ♡ te envío la cotización de mi servicio:\n\n" +
+  "Servicio:\n" +
+  service + " - " + servicePrice + "\n\n" +
+  "Decoración:\n" +
+  decoName + " - $" + decoPrice.toLocaleString("es-AR") + "\n\n" +
+  (removerText ? "Remoción:\n" + removerText + "\n" : "") +
+  "Total estimado:\n" +
+  total + "\n\n" +
+  "Quedo atenta ♡";
 
   let phoneNumber = "5491136787197";
-
   let url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
   window.open(url, "_blank");
